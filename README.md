@@ -63,15 +63,3 @@ python main.py
 ```bash
 python -m unittest discover -s tests -p "test_*.py" -v
 ```
-
-## GitHub Issues và commit
-
-Đã chia công việc theo 2 issue:
-
-### Issue 1
-
-- Thiết kế và viết các ca kiểm thử hộp đen cho các trường hợp dữ liệu hợp lệ.
-
-### Issue 2
-
-- Thiết kế và viết các ca kiểm thử hộp đen cho các trường hợp dữ liệu không hợp lệ, biên và ngoại lệ.
