@@ -1,18 +1,22 @@
-# Issue 2: Thiet ke va viet cac ca kiem thu hop den cho du lieu khong hop le, bien va ngoai le
+# Issue 2: Thiết kế và viết các ca kiểm thử hộp đen cho dữ liệu không hợp lệ, biên và ngoại lệ
 
-## Muc tieu
-Bo sung test black-box cho cac truong hop sai dinh dang, ngoai mien gia tri, gia tri bien va xu ly ngoai le.
+## Mục tiêu
 
-## Pham vi
-Ap dung cho cung 8 bai toan cua Issue 1.
+Bổ sung test black-box cho các trường hợp sai định dạng, ngoài miền giá trị, giá trị biên và xử lý ngoại lệ.
 
-## Cong viec can lam
-- Xac dinh lop tuong duong khong hop le.
-- Xac dinh gia tri bien khong hop le.
-- Bo sung test cho ngoai le (ValueError/TypeError).
-- Ghi lai ket qua chay test.
+## Phạm vi
 
-## Tieu chi hoan thanh
-- Co file test cho invalid/boundary/exception.
-- Co tai lieu danh sach test case khong hop le.
-- Co file ket qua chay test de doi chieu.
+Áp dụng cho cùng 8 bài toán của Issue 1.
+
+## Công việc cần làm
+
+- Xác định lớp tương đương không hợp lệ.
+- Xác định giá trị biên không hợp lệ.
+- Bổ sung test cho ngoại lệ (ValueError/TypeError).
+- Ghi lại kết quả chạy test.
+
+## Tiêu chí hoàn thành
+
+- Có file test cho invalid/boundary/exception.
+- Có tài liệu danh sách test case không hợp lệ.
+- Có file kết quả chạy test để đối chiếu.

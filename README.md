@@ -1,67 +1,77 @@
-﻿# Bai thuc hanh: Kiem thu hop den
+﻿# Bài thực hành 03 - Kiểm thử hộp đen
 
-Repo nay chua:
+Đây là bài thực hành xây dựng chương trình và thiết kế kiểm thử hộp đen cho 8 bài toán cơ bản. Repository đã bao gồm mã nguồn, test case, kết quả chạy kiểm thử và mô tả ngắn gọn cách áp dụng black-box testing.
 
-- Ma nguon 8 bai toan o thu muc src/
-- Test tu dong theo 2 issue o thu muc tests/
-- Danh sach test case va mo ta ap dung black-box o thu muc docs/
-- Ket qua chay test o file docs/test_results.txt
+## Các bài toán
 
-## Danh sach bai toan
+1. Tính chu vi hình chữ nhật
+2. Tính diện tích hình chữ nhật
+3. Giải phương trình bậc 2
+4. Tính số ngày của một tháng
+5. Kiểm tra số nguyên tố
+6. Tính tổng S = 1 - 2 + 3 - 4 + ... + n
+7. Tìm UCLN của a và b
+8. Tính tổng S = 1! + 2! + 3! + ... + n!
 
-1. Tinh chu vi hinh chu nhat
-2. Tinh dien tich hinh chu nhat
-3. Giai phuong trinh bac 2
-4. Tinh so ngay cua mot thang
-5. Kiem tra n co phai so nguyen to
-6. Tinh tong S = 1 - 2 + 3 - ... + n
-7. Tim UCLN cua a va b
-8. Tinh tong S = 1! + 2! + ... + n!
+## Cấu trúc thư mục
 
-## Cau truc
+- [main.py](main.py): chương trình menu để chạy trực tiếp
+- [src/](src): các file chương trình theo từng bài toán
+- [tests/](tests): test tự động cho 2 issue
+- [docs/](docs): test case, mô tả black-box và kết quả chạy test
 
-- src/algorithms.py: cac ham bai toan
-- tests/test_issue1_valid_cases.py: test cho issue 1 (du lieu hop le)
-- tests/test_issue2_invalid_boundary_cases.py: test cho issue 2 (du lieu khong hop le, bien, ngoai le)
-- docs/testcases_issue1_valid.md: danh sach test case hop le
-- docs/testcases_issue2_invalid_boundary.md: danh sach test case khong hop le/bien
-- docs/blackbox_application.md: mo ta ngan gon cach ap dung black-box
+## Mã nguồn chương trình
 
-## Cach chay test
+- [src/ChuViHCN.py](src/ChuViHCN.py)
+- [src/DienTichHCN.py](src/DienTichHCN.py)
+- [src/GiaiPhuongTrinhBac2.py](src/GiaiPhuongTrinhBac2.py)
+- [src/SoNgayTrongThang.py](src/SoNgayTrongThang.py)
+- [src/SoNguyenTo.py](src/SoNguyenTo.py)
+- [src/TinhTongS.py](src/TinhTongS.py)
+- [src/UCLN.py](src/UCLN.py)
+- [src/GiaiThua.py](src/GiaiThua.py)
+- [src/TongCacGiaiThua.py](src/TongCacGiaiThua.py)
+
+File tổng hợp để import chung:
+
+- [src/algorithms.py](src/algorithms.py)
+- [src/**init**.py](src/__init__.py)
+
+## Danh sách test case
+
+- Hợp lệ: [docs/testcases_issue1_valid.md](docs/testcases_issue1_valid.md)
+- Không hợp lệ, biên và ngoại lệ: [docs/testcases_issue2_invalid_boundary.md](docs/testcases_issue2_invalid_boundary.md)
+
+## Mô tả áp dụng kiểm thử hộp đen
+
+- [docs/blackbox_application.md](docs/blackbox_application.md)
+
+## Kết quả chạy kiểm thử
+
+- [docs/test_results.txt](docs/test_results.txt)
+
+## Cách chạy chương trình
+
+Chạy menu nhập liệu trực tiếp:
+
+```bash
+python main.py
+```
+
+## Cách chạy kiểm thử
 
 ```bash
 python -m unittest discover -s tests -p "test_*.py" -v
 ```
 
-## Goi y thuc hien GitHub Issues + commits
+## GitHub Issues và commit
+
+Đã chia công việc theo 2 issue:
 
 ### Issue 1
 
-- Tieu de: Thiet ke va viet cac ca kiem thu hop den cho du lieu hop le
-- Noi dung: hoan thien test case va test code cho luong hop le.
-- Commit goi y: feat(tests): add black-box valid test cases (issue #1)
+- Thiết kế và viết các ca kiểm thử hộp đen cho các trường hợp dữ liệu hợp lệ.
 
 ### Issue 2
 
-- Tieu de: Thiet ke va viet cac ca kiem thu hop den cho du lieu khong hop le, bien va ngoai le
-- Noi dung: bo sung test cho du lieu sai/khong hop le/gia tri bien.
-- Commit goi y: test: add invalid boundary and exception test cases (issue #2)
-
-## Lenh git tham khao
-
-```bash
-git init
-git add .
-git commit -m "feat: add core programs for black-box testing assignment"
-
-git checkout -b issue-1-valid-tests
-# cap nhat phan lien quan issue 1
-# git add ...
-# git commit -m "feat(tests): add black-box valid test cases (issue #1)"
-
-git checkout main
-git checkout -b issue-2-invalid-boundary-tests
-# cap nhat phan lien quan issue 2
-# git add ...
-# git commit -m "test: add invalid boundary and exception test cases (issue #2)"
-```
+- Thiết kế và viết các ca kiểm thử hộp đen cho các trường hợp dữ liệu không hợp lệ, biên và ngoại lệ.

@@ -1,69 +1,70 @@
-# Issue 2 - Black-box test cases for invalid, boundary, exception data
+# Issue 2 - Các test case kiểm thử hộp đen cho dữ liệu không hợp lệ, biên, ngoại lệ
 
-This file focuses on:
-- invalid equivalence classes
-- out-of-range boundaries
-- exception handling
+Tài liệu này tập trung vào:
 
-## 1) Rectangle perimeter
+- lớp tương đương không hợp lệ
+- dữ liệu ngoài miền giá trị
+- xử lý ngoại lệ
 
-| TC ID | Input | Technique | Expected behavior |
-|---|---|---|---|
-| RP-I1 | length=-1, width=3 | Invalid class | Raise ValueError |
-| RP-I2 | length=0, width=3 | Boundary invalid | Raise ValueError |
-| RP-I3 | length="5", width=3 | Invalid type | Raise TypeError |
+## 1) Tính chu vi hình chữ nhật
 
-## 2) Rectangle area
+| Mã TC | Đầu vào             | Kỹ thuật          | Hành vi mong đợi |
+| ----- | ------------------- | ----------------- | ---------------- |
+| RP-I1 | length=-1, width=3  | Lớp không hợp lệ  | Raise ValueError |
+| RP-I2 | length=0, width=3   | Biên không hợp lệ | Raise ValueError |
+| RP-I3 | length="5", width=3 | Sai kiểu dữ liệu  | Raise TypeError  |
 
-| TC ID | Input | Technique | Expected behavior |
-|---|---|---|---|
-| RA-I1 | length=0, width=3 | Boundary invalid | Raise ValueError |
-| RA-I2 | length=-2, width=3 | Invalid class | Raise ValueError |
+## 2) Tính diện tích hình chữ nhật
 
-## 3) Solve quadratic equation
+| Mã TC | Đầu vào            | Kỹ thuật          | Hành vi mong đợi |
+| ----- | ------------------ | ----------------- | ---------------- |
+| RA-I1 | length=0, width=3  | Biên không hợp lệ | Raise ValueError |
+| RA-I2 | length=-2, width=3 | Lớp không hợp lệ  | Raise ValueError |
 
-| TC ID | Input | Technique | Expected behavior |
-|---|---|---|---|
-| QE-I1 | a=0, b=2, c=1 | Invalid class | Raise ValueError |
-| QE-I2 | a=1, b=0, c=1 | Valid class (delta<0) | type=no_real_root |
-| QE-I3 | a="1", b=2, c=1 | Invalid type | Raise TypeError |
+## 3) Giải phương trình bậc 2
 
-## 4) Number of days in month
+| Mã TC | Đầu vào         | Kỹ thuật               | Hành vi mong đợi  |
+| ----- | --------------- | ---------------------- | ----------------- |
+| QE-I1 | a=0, b=2, c=1   | Lớp không hợp lệ       | Raise ValueError  |
+| QE-I2 | a=1, b=0, c=1   | Lớp hợp lệ (delta < 0) | type=no_real_root |
+| QE-I3 | a="1", b=2, c=1 | Sai kiểu dữ liệu       | Raise TypeError   |
 
-| TC ID | Input | Technique | Expected behavior |
-|---|---|---|---|
-| DM-I1 | month=0, year=2024 | Boundary invalid (below 1) | Raise ValueError |
-| DM-I2 | month=13, year=2024 | Boundary invalid (above 12) | Raise ValueError |
-| DM-I3 | month=2, year=0 | Invalid class (year <= 0) | Raise ValueError |
-| DM-I4 | month="2", year=2024 | Invalid type | Raise TypeError |
+## 4) Tính số ngày của một tháng
 
-## 5) Prime check
+| Mã TC | Đầu vào              | Kỹ thuật                       | Hành vi mong đợi |
+| ----- | -------------------- | ------------------------------ | ---------------- |
+| DM-I1 | month=0, year=2024   | Biên không hợp lệ (nhỏ hơn 1)  | Raise ValueError |
+| DM-I2 | month=13, year=2024  | Biên không hợp lệ (lớn hơn 12) | Raise ValueError |
+| DM-I3 | month=2, year=0      | Lớp không hợp lệ (year <= 0)   | Raise ValueError |
+| DM-I4 | month="2", year=2024 | Sai kiểu dữ liệu               | Raise TypeError  |
 
-| TC ID | Input | Technique | Expected behavior |
-|---|---|---|---|
-| PR-I1 | n=1 | Boundary value | False |
-| PR-I2 | n=0 | Invalid domain for prime | False |
-| PR-I3 | n=3.5 | Invalid type | Raise TypeError |
+## 5) Kiểm tra số nguyên tố
 
-## 6) Alternating sum
+| Mã TC | Đầu vào | Kỹ thuật                           | Hành vi mong đợi |
+| ----- | ------- | ---------------------------------- | ---------------- |
+| PR-I1 | n=1     | Giá trị biên                       | False            |
+| PR-I2 | n=0     | Miền không hợp lệ cho số nguyên tố | False            |
+| PR-I3 | n=3.5   | Sai kiểu dữ liệu                   | Raise TypeError  |
 
-| TC ID | Input | Technique | Expected behavior |
-|---|---|---|---|
-| AS-I1 | n=0 | Boundary invalid | Raise ValueError |
-| AS-I2 | n=-2 | Invalid class | Raise ValueError |
-| AS-I3 | n="5" | Invalid type | Raise TypeError |
+## 6) Tính tổng luân phiên
 
-## 7) GCD
+| Mã TC | Đầu vào | Kỹ thuật          | Hành vi mong đợi |
+| ----- | ------- | ----------------- | ---------------- |
+| AS-I1 | n=0     | Biên không hợp lệ | Raise ValueError |
+| AS-I2 | n=-2    | Lớp không hợp lệ  | Raise ValueError |
+| AS-I3 | n="5"   | Sai kiểu dữ liệu  | Raise TypeError  |
 
-| TC ID | Input | Technique | Expected behavior |
-|---|---|---|---|
-| GCD-I1 | a=0, b=0 | Invalid class | Raise ValueError |
-| GCD-I2 | a=5, b="10" | Invalid type | Raise TypeError |
+## 7) Tìm UCLN
 
-## 8) Sum of factorials
+| Mã TC  | Đầu vào     | Kỹ thuật         | Hành vi mong đợi |
+| ------ | ----------- | ---------------- | ---------------- |
+| GCD-I1 | a=0, b=0    | Lớp không hợp lệ | Raise ValueError |
+| GCD-I2 | a=5, b="10" | Sai kiểu dữ liệu | Raise TypeError  |
 
-| TC ID | Input | Technique | Expected behavior |
-|---|---|---|---|
-| SF-I1 | n=0 | Boundary invalid | Raise ValueError |
-| SF-I2 | n=-1 | Invalid class | Raise ValueError |
-| SF-I3 | n=2.2 | Invalid type | Raise TypeError |
+## 8) Tính tổng giai thừa
+
+| Mã TC | Đầu vào | Kỹ thuật          | Hành vi mong đợi |
+| ----- | ------- | ----------------- | ---------------- |
+| SF-I1 | n=0     | Biên không hợp lệ | Raise ValueError |
+| SF-I2 | n=-1    | Lớp không hợp lệ  | Raise ValueError |
+| SF-I3 | n=2.2   | Sai kiểu dữ liệu  | Raise TypeError  |

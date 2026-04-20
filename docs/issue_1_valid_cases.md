@@ -1,25 +1,29 @@
-# Issue 1: Thiet ke va viet cac ca kiem thu hop den cho du lieu hop le
+# Issue 1: Thiết kế và viết các ca kiểm thử hộp đen cho dữ liệu hợp lệ
 
-## Muc tieu
-Thiet ke va trien khai cac test case black-box cho du lieu hop le cua 8 bai toan.
+## Mục tiêu
 
-## Pham vi
-- Tinh chu vi hinh chu nhat
-- Tinh dien tich hinh chu nhat
-- Giai phuong trinh bac 2
-- Tinh so ngay cua mot thang
-- Kiem tra so nguyen to
-- Tong luan phien 1 - 2 + 3 - ... + n
-- UCLN cua a va b
-- Tong giai thua 1! + 2! + ... + n!
+Thiết kế và triển khai các test case black-box cho dữ liệu hợp lệ của 8 bài toán.
 
-## Cong viec can lam
-- Xac dinh input/output mong doi cho moi bai toan.
-- Chia lop tuong duong hop le.
-- Chon gia tri bien hop le.
-- Viet test case va test code tuong ung.
+## Phạm vi
 
-## Tieu chi hoan thanh
-- Co file test cho du lieu hop le.
-- Co danh sach test case hop le trong tai lieu.
-- Toan bo test hop le chay pass.
+- Tính chu vi hình chữ nhật
+- Tính diện tích hình chữ nhật
+- Giải phương trình bậc 2
+- Tính số ngày của một tháng
+- Kiểm tra số nguyên tố
+- Tổng luân phiên 1 - 2 + 3 - ... + n
+- UCLN của a và b
+- Tổng giai thừa 1! + 2! + ... + n!
+
+## Công việc cần làm
+
+- Xác định input/output mong đợi cho mỗi bài toán.
+- Chia lớp tương đương hợp lệ.
+- Chọn giá trị biên hợp lệ.
+- Viết test case và test code tương ứng.
+
+## Tiêu chí hoàn thành
+
+- Có file test cho dữ liệu hợp lệ.
+- Có danh sách test case hợp lệ trong tài liệu.
+- Toàn bộ test hợp lệ chạy pass.

@@ -1,80 +1,89 @@
-# Issue 1 - Black-box test cases for valid data
+# Issue 1 - Các test case kiểm thử hộp đen cho dữ liệu hợp lệ
 
-This file contains valid-data test cases using black-box techniques:
-- equivalence partitioning
-- boundary value analysis (valid boundaries)
+Tài liệu này liệt kê các test case dữ liệu hợp lệ theo kỹ thuật kiểm thử hộp đen:
 
-## 1) Rectangle perimeter
-Input: length, width (> 0)
-Output: perimeter = 2 * (length + width)
+- phân lớp tương đương
+- phân tích giá trị biên (biên hợp lệ)
 
-| TC ID | Input | Technique | Expected output |
-|---|---|---|---|
-| RP-V1 | length=5, width=3 | Valid equivalence class | 16 |
-| RP-V2 | length=1, width=1 | Valid boundary (minimum positive) | 4 |
+## 1) Tính chu vi hình chữ nhật
 
-## 2) Rectangle area
-Input: length, width (> 0)
-Output: area = length * width
+Đầu vào: length, width (> 0)
+Đầu ra: perimeter = 2 \* (length + width)
 
-| TC ID | Input | Technique | Expected output |
-|---|---|---|---|
-| RA-V1 | length=5, width=3 | Valid equivalence class | 15 |
-| RA-V2 | length=1, width=2 | Valid boundary | 2 |
+| Mã TC | Đầu vào           | Kỹ thuật                             | Kết quả mong đợi |
+| ----- | ----------------- | ------------------------------------ | ---------------- |
+| RP-V1 | length=5, width=3 | Lớp tương đương hợp lệ               | 16               |
+| RP-V2 | length=1, width=1 | Giá trị biên hợp lệ (nhỏ nhất dương) | 4                |
 
-## 3) Solve quadratic equation ax^2 + bx + c = 0
-Input: a, b, c with a != 0
-Output: two roots / double root / no real root
+## 2) Tính diện tích hình chữ nhật
 
-| TC ID | Input | Technique | Expected output |
-|---|---|---|---|
-| QE-V1 | a=1, b=-3, c=2 | Valid class (delta > 0) | type=two_roots, roots={1,2} |
-| QE-V2 | a=1, b=2, c=1 | Valid boundary (delta = 0) | type=double_root, root=-1 |
+Đầu vào: length, width (> 0)
+Đầu ra: area = length \* width
 
-## 4) Number of days in month
-Input: month in [1..12], year > 0
-Output: 28/29/30/31
+| Mã TC | Đầu vào           | Kỹ thuật               | Kết quả mong đợi |
+| ----- | ----------------- | ---------------------- | ---------------- |
+| RA-V1 | length=5, width=3 | Lớp tương đương hợp lệ | 15               |
+| RA-V2 | length=1, width=2 | Giá trị biên hợp lệ    | 2                |
 
-| TC ID | Input | Technique | Expected output |
-|---|---|---|---|
-| DM-V1 | month=1, year=2024 | Valid class (31-day month) | 31 |
-| DM-V2 | month=2, year=2024 | Valid class (leap year) | 29 |
-| DM-V3 | month=2, year=2023 | Valid class (non-leap year) | 28 |
-| DM-V4 | month=12, year=2024 | Valid boundary (upper month boundary) | 31 |
+## 3) Giải phương trình bậc 2 ax^2 + bx + c = 0
 
-## 5) Prime check
-Input: integer n
-Output: True/False
+Đầu vào: a, b, c với a != 0
+Đầu ra: 2 nghiệm / nghiệm kép / vô nghiệm thực
 
-| TC ID | Input | Technique | Expected output |
-|---|---|---|---|
-| PR-V1 | n=13 | Valid class (prime) | True |
-| PR-V2 | n=15 | Valid class (composite) | False |
-| PR-V3 | n=2 | Valid boundary (smallest prime) | True |
+| Mã TC | Đầu vào        | Kỹ thuật                | Kết quả mong đợi            |
+| ----- | -------------- | ----------------------- | --------------------------- |
+| QE-V1 | a=1, b=-3, c=2 | Lớp hợp lệ (delta > 0)  | type=two_roots, roots={1,2} |
+| QE-V2 | a=1, b=2, c=1  | Biên hợp lệ (delta = 0) | type=double_root, root=-1   |
 
-## 6) Alternating sum S = 1 - 2 + 3 - ... + n
-Input: integer n > 0
-Output: integer sum
+## 4) Tính số ngày của một tháng
 
-| TC ID | Input | Technique | Expected output |
-|---|---|---|---|
-| AS-V1 | n=5 | Valid class | 3 |
-| AS-V2 | n=1 | Valid boundary (minimum n) | 1 |
+Đầu vào: month trong [1..12], year > 0
+Đầu ra: 28/29/30/31
 
-## 7) GCD of a and b
-Input: integers a, b (not both zero)
-Output: gcd(a,b)
+| Mã TC | Đầu vào             | Kỹ thuật                                  | Kết quả mong đợi |
+| ----- | ------------------- | ----------------------------------------- | ---------------- |
+| DM-V1 | month=1, year=2024  | Lớp hợp lệ (tháng 31 ngày)                | 31               |
+| DM-V2 | month=2, year=2024  | Lớp hợp lệ (năm nhuận)                    | 29               |
+| DM-V3 | month=2, year=2023  | Lớp hợp lệ (không nhuận)                  | 28               |
+| DM-V4 | month=12, year=2024 | Giá trị biên hợp lệ (biên trên của tháng) | 31               |
 
-| TC ID | Input | Technique | Expected output |
-|---|---|---|---|
-| GCD-V1 | a=48, b=18 | Valid class | 6 |
-| GCD-V2 | a=0, b=5 | Valid boundary (one operand zero) | 5 |
+## 5) Kiểm tra số nguyên tố
 
-## 8) Sum S = 1! + 2! + ... + n!
-Input: integer n > 0
-Output: integer sum
+Đầu vào: số nguyên n
+Đầu ra: True/False
 
-| TC ID | Input | Technique | Expected output |
-|---|---|---|---|
-| SF-V1 | n=3 | Valid class | 9 |
-| SF-V2 | n=1 | Valid boundary (minimum n) | 1 |
+| Mã TC | Đầu vào | Kỹ thuật                                    | Kết quả mong đợi |
+| ----- | ------- | ------------------------------------------- | ---------------- |
+| PR-V1 | n=13    | Lớp hợp lệ (nguyên tố)                      | True             |
+| PR-V2 | n=15    | Lớp hợp lệ (hợp số)                         | False            |
+| PR-V3 | n=2     | Giá trị biên hợp lệ (số nguyên tố nhỏ nhất) | True             |
+
+## 6) Tính tổng luân phiên S = 1 - 2 + 3 - ... + n
+
+Đầu vào: số nguyên n > 0
+Đầu ra: tổng nguyên
+
+| Mã TC | Đầu vào | Kỹ thuật                         | Kết quả mong đợi |
+| ----- | ------- | -------------------------------- | ---------------- |
+| AS-V1 | n=5     | Lớp hợp lệ                       | 3                |
+| AS-V2 | n=1     | Giá trị biên hợp lệ (n nhỏ nhất) | 1                |
+
+## 7) Tìm UCLN của a và b
+
+Đầu vào: số nguyên a, b (không đồng thời bằng 0)
+Đầu ra: gcd(a,b)
+
+| Mã TC  | Đầu vào    | Kỹ thuật                            | Kết quả mong đợi |
+| ------ | ---------- | ----------------------------------- | ---------------- |
+| GCD-V1 | a=48, b=18 | Lớp hợp lệ                          | 6                |
+| GCD-V2 | a=0, b=5   | Giá trị biên hợp lệ (một số bằng 0) | 5                |
+
+## 8) Tính tổng S = 1! + 2! + ... + n!
+
+Đầu vào: số nguyên n > 0
+Đầu ra: tổng nguyên
+
+| Mã TC | Đầu vào | Kỹ thuật                         | Kết quả mong đợi |
+| ----- | ------- | -------------------------------- | ---------------- |
+| SF-V1 | n=3     | Lớp hợp lệ                       | 9                |
+| SF-V2 | n=1     | Giá trị biên hợp lệ (n nhỏ nhất) | 1                |
